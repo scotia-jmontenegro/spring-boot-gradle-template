@@ -1,0 +1,11 @@
+services:
+  your-app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    # For development with hot reload:
+    volumes:
+      - ./:/workspace/app
+      - ~/.gradle:/root/.gradle
